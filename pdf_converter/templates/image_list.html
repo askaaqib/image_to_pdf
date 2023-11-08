@@ -1,0 +1,12 @@
+<ul>
+    {% for image in images %}
+    <li>
+        <a href="{{ image.image.url }}" target="_blank">Image</a> |
+        {% if image.pdf %}
+            <a href="{{ image.pdf.url }}" target="_blank">PDF</a>
+        {% else %}
+            No PDF Available
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
